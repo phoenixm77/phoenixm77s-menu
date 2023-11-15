@@ -248,3 +248,4 @@ cls
 goto startt
 :penalty
 shutdown /s /t 00
+rem end
