@@ -183,13 +183,13 @@ echo.
 echo 1 : voxiom + settings
 echo 2 : tetris - scratch
 echo 3 : forward assault - crazygames
-echo 4 :
+echo 4 : menu github page
 echo 5 : < back
 CHOICE /N /C:12345 /M ">"%1
 IF ERRORLEVEL ==1 GOTO vox
 IF ERRORLEVEL ==2 GOTO tetris
 IF ERRORLEVEL ==3 GOTO fwd
-IF ERRORLEVEL ==4 GOTO
+IF ERRORLEVEL ==4 GOTO github
 IF ERRORLEVEL ==5 GOTO exitt
 :vox
 rem ------start-of-vox-------
@@ -238,7 +238,9 @@ echo you can copy the link to google where it works
 pause
 start https://crazygames/game/forward-assault
 goto websites
-:
+:github
+start https://github.com/phoenixm77/phoenixm77s-menu
+goto websites
 :exitt
 cls
 goto startt
