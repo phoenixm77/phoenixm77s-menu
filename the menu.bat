@@ -16,7 +16,7 @@ goto penalty
 Echo You have %tries% attempts left.
 Echo Please enter your password to proceed
 set /p password=
-if %password%==kaos goto cont
+if %password%==Kaos goto cont
 goto top
 :cont
 cls
