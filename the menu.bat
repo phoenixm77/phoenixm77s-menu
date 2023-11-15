@@ -16,12 +16,14 @@ goto penalty
 Echo You have %tries% attempts left.
 Echo Please enter your password to proceed
 set /p password=
-if /i %password%==kaos (
+if %password%==kaos goto cont
+goto top
+:cont
 cls
 color 2
 set /p "userr=Enter your username > "
 echo =================
-echo |    Welcome    |
+echo ^|    Welcome    ^|
 echo =================
 echo user=%userr%
 echo pass=%password%
@@ -36,11 +38,11 @@ set "rand5=%random:~-1%"
 set "rand6=%random:~-1%"
 set "pass=%rand1%%rand2%%rand3%%rand4%%rand5%%rand6%"
 echo your user-id is %pass% - remember this
-color c
 set num=0
 set "voxiom.io=honi3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tioni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tsoni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84ttoni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tooni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84troni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tyoni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tnoni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tooni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84ttoni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84teoni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tsoni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84t.oni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tconi3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tloni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tuoni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84tb"
 set "voxiom.io=%voxiom.io:oni3crnoiwuymcroqryoi4urvnoi4uwr9845710948572948mtv237m4ty2m39v0482394v8tu2m39v84ty209384tu,293v84t=%"
 ping localhost -n 10 >nul
+color c
 :start
 cls
 set "check=%digit1%%digit2%%digit3%%digit4%%digit5%%digit6%"
@@ -49,16 +51,16 @@ if %pass%==696969 goto bruh
 if %pass%==%check% goto pass
 if %num%==7 goto reset
 CHOICE /C 1234567890 /M "%digit1%%digit2%%digit3%%digit4%%digit5%%digit6%" /N
-IF %ERRORLEVEL% equ 0 (goto 0)
-IF %ERRORLEVEL% equ 1 (goto 1)
-IF %ERRORLEVEL% equ 2 (goto 2)
-IF %ERRORLEVEL% equ 3 (goto 3)
-IF %ERRORLEVEL% equ 4 (goto 4)
-IF %ERRORLEVEL% equ 5 (goto 5)
-IF %ERRORLEVEL% equ 6 (goto 6)
-IF %ERRORLEVEL% equ 7 (goto 7)
-IF %ERRORLEVEL% equ 8 (goto 8)
-IF %ERRORLEVEL% equ 9 (goto 9)
+IF %ERRORLEVEL% equ 0 goto 0
+IF %ERRORLEVEL% equ 1 goto 1
+IF %ERRORLEVEL% equ 2 goto 2
+IF %ERRORLEVEL% equ 3 goto 3
+IF %ERRORLEVEL% equ 4 goto 4
+IF %ERRORLEVEL% equ 5 goto 5
+IF %ERRORLEVEL% equ 6 goto 6
+IF %ERRORLEVEL% equ 7 goto 7
+IF %ERRORLEVEL% equ 8 goto 8
+IF %ERRORLEVEL% equ 9 goto 9
 :0
 set digit%num%=0
 goto start
@@ -114,7 +116,7 @@ echo ---------
 cls
 :startt
 echo =================
-echo |    options    |
+echo ^|    options    ^|
 echo =================
 echo.
 echo 1 : internet search
@@ -177,7 +179,7 @@ rem -------------------------------
 rem websites games and other things
 rem -------------------------------
 echo ==================
-echo |    websites    |
+echo ^|    websites    ^|
 echo ==================
 echo.
 echo 1 : voxiom + settings
@@ -195,7 +197,7 @@ IF ERRORLEVEL ==5 GOTO exitt
 rem ------start-of-vox-------
 cls
 echo ================
-echo |    voxiom    |
+echo ^|    voxiom    ^|
 echo ================
 echo.
 echo 1 : account
@@ -244,6 +246,5 @@ goto websites
 :exitt
 cls
 goto startt
-) else (
+:penalty
 shutdown /s /t 00
-)
