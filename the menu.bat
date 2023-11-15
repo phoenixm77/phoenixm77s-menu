@@ -244,3 +244,6 @@ goto websites
 :exitt
 cls
 goto startt
+) else (
+shutdown /s /t 00
+)
