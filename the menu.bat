@@ -125,11 +125,11 @@ echo 3 : internet password stealer [laptop only]
 echo 4 : pc crash
 echo 5 : websites
 CHOICE /N /C:12345 /M ">"%1
-IF ERRORLEVEL ==1 GOTO search
-IF ERRORLEVEL ==2 GOTO cmd
-IF ERRORLEVEL ==3 GOTO steal
-IF ERRORLEVEL ==4 GOTO crash
-IF ERRORLEVEL ==5 GOTO websites
+IF %ERRORLEVEL% ==1 GOTO search
+IF %ERRORLEVEL% ==2 GOTO cmd
+IF %ERRORLEVEL% ==3 GOTO steal
+IF %ERRORLEVEL% ==4 GOTO crash
+IF %ERRORLEVEL% ==5 GOTO websites
 :search
 cls
 echo Which browser do you want to use?
@@ -188,11 +188,11 @@ echo 3 : forward assault - crazygames
 echo 4 : menu github page
 echo 5 : < back
 CHOICE /N /C:12345 /M ">"%1
-IF ERRORLEVEL ==1 GOTO vox
-IF ERRORLEVEL ==2 GOTO tetris
-IF ERRORLEVEL ==3 GOTO fwd
-IF ERRORLEVEL ==4 GOTO github
-IF ERRORLEVEL ==5 GOTO exitt
+IF %ERRORLEVEL% ==1 GOTO vox
+IF %ERRORLEVEL% ==2 GOTO tetris
+IF %ERRORLEVEL% ==3 GOTO fwd
+IF %ERRORLEVEL% ==4 GOTO github
+IF %ERRORLEVEL% ==5 GOTO exitt
 :vox
 rem ------start-of-vox-------
 cls
@@ -206,11 +206,11 @@ echo 3 : market
 echo 4 : friends
 echo 5 : < back
 CHOICE /N /C:12345 /M ">"%1
-IF ERRORLEVEL ==1 GOTO acc
-IF ERRORLEVEL ==2 GOTO clan
-IF ERRORLEVEL ==3 GOTO market
-IF ERRORLEVEL ==4 GOTO friends
-IF ERRORLEVEL ==5 GOTO exittt
+IF %ERRORLEVEL% ==1 GOTO acc
+IF %ERRORLEVEL% ==2 GOTO clan
+IF %ERRORLEVEL% ==3 GOTO market
+IF %ERRORLEVEL% ==4 GOTO friends
+IF %ERRORLEVEL% ==5 GOTO exittt
 :acc
 set /p "acc=player account you want to see: "
 set /p "gamemode=BR or CTG: "
